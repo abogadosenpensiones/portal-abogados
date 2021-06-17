@@ -9,12 +9,14 @@ import { BannerComponent } from './banner/banner.component';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { InfoDerechoComponent } from './info-derecho-banner/info-derecho-banner.component';
+import { PorqueNosotrosComponent } from './porque-nosotros/porque-nosotros.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     BannerComponent,
-    InfoDerechoComponent
+    InfoDerechoComponent,
+    PorqueNosotrosComponent
 
   ],
   imports: [
