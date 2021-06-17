@@ -8,11 +8,13 @@ import { SharedModule } from '../../shared/shared.module';
 import { BannerComponent } from './banner/banner.component';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
+import { InfoDerechoComponent } from './info-derecho-banner/info-derecho-banner.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     BannerComponent,
+    InfoDerechoComponent
 
   ],
   imports: [
