@@ -25,19 +25,19 @@ const routes: Routes = [
     path: 'servicios',
     loadChildren: () =>
       import('./components/pages/servicios/servicios.module').then((m) => m.ServiciosModule),
-    data: { breadcrumb: 'Inicio' },
+    data: { breadcrumb: 'Servicios' },
   },
   {
     path: 'casos-exito',
     loadChildren: () =>
       import('./components/pages/casos-exito/casos-exito.module').then((m) => m.CasosExitoModule),
-    data: { breadcrumb: 'Inicio' },
+    data: { breadcrumb: 'Casos de éxito' },
   },
   {
     path: 'contacto',
     loadChildren: () =>
       import('./components/pages/contacto/contacto.module').then((m) => m.ContactoModule),
-    data: { breadcrumb: 'Inicio' },
+    data: { breadcrumb: 'Contacto' },
   },
   {
     path: '**',
