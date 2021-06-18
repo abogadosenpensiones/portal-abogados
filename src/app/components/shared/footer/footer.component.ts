@@ -3,19 +3,23 @@ import { Component, OnInit, Input, HostListener } from '@angular/core';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
   @Input() layout: number | string;
   @Input() logo: number | string;
   @Input() bgimage: number | string;
   @Input() shape: number | string;
 
+  fechaActual = new Date().getFullYear();
+
   ScrolltoTop() {
     const navbar = document.getElementById('backToTop');
-    if (document.body.scrollTop >= 100 || document.documentElement.scrollTop > 100) {
+    if (
+      document.body.scrollTop >= 100 ||
+      document.documentElement.scrollTop > 100
+    ) {
       navbar.classList.add('d-block');
     } else {
       navbar.classList.remove('d-block');
@@ -25,7 +29,11 @@ export class FooterComponent implements OnInit {
   topPosToStartShowing = 100;
   @HostListener('window:scroll')
   checkScroll() {
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const scrollPosition =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
     if (scrollPosition >= this.topPosToStartShowing) {
       this.isShow = true;
     } else {
@@ -37,11 +45,9 @@ export class FooterComponent implements OnInit {
     window.scroll({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
